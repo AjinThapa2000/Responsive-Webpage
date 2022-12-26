@@ -1,0 +1,290 @@
+:root{
+  --primary: rgb(0,255,255);
+  --secondary:rgb(48,205,233);
+  --tertiary:blue;
+  --dark: rgb(82,85,85);
+
+}
+
+/* header part here*/
+
+header{
+  background-color:var(--dark);
+  padding: 3px 6% 15px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+
+
+}
+
+/*Nevigation bar display here */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+/* webpage heading title */
+
+header h1{
+  background-color: var(--primary);
+  box-shadow: 0px 5px 35px #e64d4d;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 5px 1% 5px 6%;
+  margin: 0;
+  font-size: 4vh;
+  line-height: 1;
+
+  
+}
+/* nevigation bar hover animation and design */
+
+nav a {
+  color: var(--primary);
+  margin-left: 15px;
+  margin-right: 15px;
+  background-image: linear-gradient(275deg, var(--secondary) 0%, var(--secondary) 100%);
+  background-repeat: no-repeat;
+  text-decoration: none;
+  background-size: 100% 0.1em;
+  background-position: bottom;
+  transition: all 0.25s ease-in;
+
+  
+}
+
+nav a:hover{
+  background-size: 10% 0%;
+  background-color: var(--dark);
+}
+
+/* banner display */
+
+.hero-banner{
+  padding: 35px;
+  background-image: url("../images/02-hero-bg.jpg"), linear-gradient(275deg, var(--secondary) 0%, var(--secondary) 100%);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode:soft-light;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  text-align: left;
+
+
+
+}
+
+/* banner title */
+
+.hero-banner h2{
+
+  padding: 10px;
+  background-color: var(--primary);
+  line-height: 1.5;
+  margin: 0;
+  display: inline;
+}
+
+/* webpage section part */
+.page-wrapper{
+  max-width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* section of page display here */
+.page-section{
+  margin: 25px 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/*page section headings */
+
+.page-section h2{
+  flex: 0 0 20%;
+  text-align: right;
+  padding-right: 15px;
+  border-right: 4px solid var(--dark);
+  font-size: 4vw;
+  line-height: 1.1;
+  color: var(--dark);
+}
+/* page section display area*/
+.page-section div{
+  flex: 0 0 77%;
+}
+/*page section discription and elements display here */
+
+.page-section p{
+  margin-left: 35px;
+  margin-top: 40px;
+}
+/* page section work element display by flex */
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.flex-item{
+  border: 5px solid var(--secondary);
+  background-color:  rgb(99, 206, 153);
+  background-blend-mode:soft-light ;
+  color: var(--dark);
+  min-height: 150px;
+  max-height: 150px;
+  flex-basis: cal(50%-1em);
+  display: flex;
+  align-items:flex-end;
+  padding: 0 0 20px 0;
+  margin: 2.5em;
+  text-decoration: none;
+  background-size: 150%;
+  transition: all 0.5s;
+  font-size: 0.9rem;
+
+}
+
+.flex-item:first-child{
+  min-height: 400px;
+  flex-basis: 100%;
+}
+
+.flex-item:hover{
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.flex-item div{
+  background-color: var(--secondary);
+}
+
+/* page section address display here */
+.contact address{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+
+.contact address a {
+  color: var(--dark);
+  padding: 5px;
+  font-size: 1.3em;
+  text-decoration: none;
+  background-image: linear-gradient(275deg, var(--secondary) 0%, var(--secondary) 100%);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 0.2em;
+
+}
+
+.contact address a:hover{
+  background-size: 10% 0%;
+  background-color: white;
+  transition: all 0.25s ease-out;
+
+}
+
+/* page section work image link */
+
+.buddy{
+  background-image: url(../images/02-run-buddy.jpg);
+}
+
+.lego{
+  background-image: url(../images/02-portfolio-4.jpg);
+}
+
+.corgis{
+  background-image: url(../images/02-portfolio-2.jpg);
+}
+
+.becon{
+
+  background-image: url(../images/02-portfolio-1.jpg);
+}
+
+/*display according to different screen size */
+
+@media screen and (max-width:1000px){
+
+  header{
+    padding: 0 0 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+
+  header h1{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 10vw;
+  }
+
+  header nav{
+    justify-content: center;
+
+  }
+  .page-section >h2,
+  .page-section > div{
+    flex: 0 0 100%;
+  }
+
+  .page-section h2{
+    border-right: none;
+    border-bottom: 4px solid var(--dark);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    
+  }
+
+  
+}
+
+@media screen and (max-width: 768px) {
+  .flex-item:first-child,
+  .flex-item{
+    flex-basis: 100%;
+  }
+
+  .flex-item:first-child{
+    min-height: 150px;
+
+  }
+
+  .hero-banner{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact address{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+}
+
+
+
+
+
+
