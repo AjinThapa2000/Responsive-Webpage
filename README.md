@@ -1,5 +1,4 @@
-# weekchallenge2
-responsive webpage
+#responsive webpage
 #index.html
 Html source code.
 #CSS
